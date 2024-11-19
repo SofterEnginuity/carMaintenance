@@ -11,17 +11,24 @@ ul{
 list-style:none;
 }
   body { 
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
     text-align:center;
   }
+  p{
+    text-align:left;
+  }
+
+  
 .well{
     display:flex;
+    flex-direction:column;
   }
   .wellcontent{
 width:50%;
+text-align:left;
   }
 form{
   display:flex;
@@ -37,3 +44,11 @@ form{
     position: absolute;
     z-index: -1;
   }
+  .col-sm-6 {
+    gap: 25px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    width: 100%;
+    height: 334px;
+}

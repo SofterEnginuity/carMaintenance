@@ -8,7 +8,12 @@ let type = document.querySelector('#filter-dropdown').value
         const filter = document.querySelector('.filter')
 //  if(document.querySelector('#filter-dropdown').value === 'tires'){
 Array.from(document.querySelectorAll('.well')).forEach(well =>{
-if(!well.classList.contains(type)){
+console.log(type)
+  if(type == "services"){
+    well.classList.remove('hidden')
+    
+  }
+  else if(!well.classList.contains(type)){
   well.classList.add('hidden')
 }else{
   well.classList.remove('hidden')

@@ -30,7 +30,7 @@ module.exports = function(app, passport, db) {
               console.log(result[i],serviceDate,nextDate)
             }
 
-
+console.log("items", result)
           res.render('profile.ejs', {
             user : req.user,
             items: result

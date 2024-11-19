@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
   <head>
-    <title>21 Savage Fan Site</title>
+    <title>Maintenance</title>
     <link rel="stylesheet"
       href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
     <link rel="stylesheet"
@@ -40,16 +40,17 @@
 
 
 
-        <div>
-          <button class="filter">Filter</button>
-          <label for="filter-dropdown">Select your service:</label>
-          <select id="filter-dropdown" name="name" >
+            <div>
+            <button class="filter">Filter</button>
+            <label for="filter-dropdown">Select your service:</label>
+            <select id="filter-dropdown" name="name" >
 
-            <option value="tires">Tire Rotation</option>
-            <option value="oil" >Oil Change</option>
-           </select>
-          </div>
-         
+              <option value="tires">Tire Rotation</option>
+              <option value="oil" >Oil Change</option>
+              <option value="services" >All Services</option>
+            </select>
+            </div>
+          
             <div class="row">
 
               <!-- LOCAL INFORMATION -->
@@ -59,7 +60,7 @@
             <div class="col-sm-6">
               <% for(var i=0; i<items.length; i++) {%>
                 <div class="well <%= items[i].name %>">
-                  <div class="wellcontent">
+    
                     <h3><span class="fa fa-user"></span><%= items[i].name
                       %></h3>
                     <p>
@@ -84,12 +85,6 @@
                       <span class="editable" data-id="<%= items[i]._id %>"
                         data-field="mileage"><%= items[i].mileage %></span><br>
 
-                      <strong>Next Service Date</strong>:
-                      <i class="fa fa-edit edit-icon"
-                        data-id="<%= items[i]._id %>"
-                        data-field="service" aria-hidden="true"></i><br>
-                      <span class="editable" data-id="<%= items[i]._id %>"
-                        data-field="service"><%= items[i].nextDate %></span><br>
 
                       <strong>Next Mileage</strong>:
                       <i class="fa fa-edit edit-icon"
@@ -99,36 +94,28 @@
                         data-field="nextmileage"><%= items[i].nextMileage
                         %></span><br>
 
+                      <strong>Next Service Date</strong>:
+                      <i class="fa fa-edit edit-icon"
+                        data-id="<%= items[i]._id %>"
+                        data-field="service" aria-hidden="true"></i><br>
+                      <span class="editable" data-id="<%= items[i]._id %>"
+                        data-field="service"><%= items[i].nextDate %></span><br>
+
                       <span class="delete-icon" data-id="<%= items[i]._id %>">
                         <i class="fa fa-trash-o" aria-hidden="true"></i>
                       </span>
 
                     </p>
-                  </div>
-                  <!-- <div class="wellimg">
-             
-              <input type="file" name="file" id="file" class="inputfile" />
-<label for="file">Choose a file</label>
-                <button type="submit">Upload Photo</button>
-
                 
-             
-
-              <!-- Display uploaded photo if it exists -->
-                  <% if (items[i].photo) { %>
-                  <img src="<%= items[i].photo %>" alt="Uploaded photo"
-                    style="width:100px; height:auto;">
-                  <% } %>
-                </div>
               </div>
               <% } %>
-            </div> -->
+            </div> 
 <footer>
 
 </footer>
             <script src="main.js"></script>
 
-          </div>
+       
         </div>
       </body>
     </html>
