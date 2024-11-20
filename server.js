@@ -20,8 +20,7 @@ try{
  configDB = require('./config/database.js');
 }catch(err){
   configDB = {
-    url : process.env.url,
-    dbName : process.env.dbName
+    url : process.env.url.replace('DBNAME','Crud2'),
   }
 }
 
