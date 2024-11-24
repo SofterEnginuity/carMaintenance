@@ -17,3 +17,11 @@ I built this project once I was more comfortable with working on the back end an
 
 ## Lessons Learned:
 Rendering the calculations how I wanted to was a bit tricky, but once I figured out how to target the values I needed for the calculations, the rest was cake.
+
+
+
+## Installation/Usage
+1. Clone repo
+2. run `npm install`
+3. run `node server.js`
+4. Navigate to `localhost:6060`
