@@ -17,16 +17,16 @@ var bodyParser   = require('body-parser');
 var session      = require('express-session');
 
 var configDB 
-try{
- configDB = require('./config/database.js');
-}catch(err){
-  configDB = {
-    url : process.env.url.replace('DBNAME','Crud2'),
-  }
-}
+// try{
+//  configDB = require('./config/database.js');
+// }catch(err){
+//   configDB = {
+//     url : process.env.url.replace('DBNAME','Crud2'),
+//   }
+// }
 
 var db
-console.log(process.env.DBURL)
+console.log('DBURL', process.env.DBURL)
 // configuration ===============================================================
 mongoose.connect(process.env.DBURL, (err, database) => {
   if (err) return console.log(err)
