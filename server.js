@@ -2,6 +2,7 @@
 
 // set up ======================================================================
 // get all the tools we need
+require('dotenv').config();
 var express  = require('express');
 var app      = express();
 var port     = process.env.PORT || 6060;
@@ -25,9 +26,9 @@ try{
 }
 
 var db
-
+console.log(process.env.DBURL)
 // configuration ===============================================================
-mongoose.connect(configDB.url, (err, database) => {
+mongoose.connect(process.env.DBURL, (err, database) => {
   if (err) return console.log(err)
   db = database
   require('./app/routes.js')(app, passport, db);
